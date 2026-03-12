@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+/* Base styles for the extension overlay ensuring isolation */
+#gesture-extension-root {
+    font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
+    /* Make sure HUD floats above everything */
+    position: fixed;
+    z-index: 2147483647; 
+    pointer-events: none; /* Let clicks pass through by default */
+}
+
+/* Re-enable pointer events for specific HUD components */
+.gesture-hud-interactive {
+    pointer-events: auto;
+}
