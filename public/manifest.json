@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name": "Hands-Free Comic Reader",
+    "version": "1.0.0",
+    "description": "Read web comics hands-free using local AI for eye and gesture tracking.",
+    "action": {
+        "default_title": "Comic Reader Status"
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "scripting"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "src/background/index.ts",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "src/content/index.tsx"
+            ],
+            "css": [
+                "src/content/index.css"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "assets/*"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
