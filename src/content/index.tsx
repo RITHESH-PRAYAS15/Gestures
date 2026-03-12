@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { CameraManager } from './CameraManager';
+import './index.css';
 
 // Inject the root element into the comic web page
 const injectUI = () => {

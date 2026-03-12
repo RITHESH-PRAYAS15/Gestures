@@ -26,9 +26,6 @@
             "js": [
                 "src/content/index.tsx"
             ],
-            "css": [
-                "src/content/index.css"
-            ],
             "run_at": "document_end"
         }
     ],
